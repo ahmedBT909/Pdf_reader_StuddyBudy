@@ -1,0 +1,66 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:gravity="top">
+
+    <!-- الأزرار فوق النص -->
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:weightSum="3"
+        android:spacing="8dp">
+
+        <Button
+            android:id="@+id/focusButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Focus Mode"
+            android:textColor="@color/colorlogo"
+            android:layout_marginEnd="8dp"/>
+
+        <Button
+            android:id="@+id/notesButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Add Note"
+            android:textColor="@color/colorlogo"
+            android:layout_marginEnd="8dp"/>
+
+        <Button
+            android:id="@+id/drawButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Draw"
+
+            android:textColor="@color/colorlogo"/>
+    </LinearLayout>
+
+    <!-- النص الذي يظهر للملاحظات -->
+    <TextView
+        android:id="@+id/noteTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Note: No note added."
+        android:textSize="16sp"
+        android:textColor="#333333"
+        android:layout_marginTop="16dp"
+        android:padding="12dp"
+        android:gravity="center"/>
+
+    <!-- عرض الـ PDF -->
+    <com.github.barteksc.pdfviewer.PDFView
+        android:id="@+id/pdfView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginTop="16dp"/>
+
+</LinearLayout>
